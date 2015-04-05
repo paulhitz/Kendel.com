@@ -34,10 +34,19 @@ footer {
   border-top-color: #e6e6e6;
   color: #cbcbcb;
   font-size: small;
+  text-align: center;
+}
+
+footer p {
+  padding-top: 10px;
+}
+
+footer a {
+  color: #999;
 }
 
 article {
-  width: 480px;
+  max-width: 480px;
   border-style: solid;
   border-color: #C9C9C9;
   border-width: 1px;
@@ -59,7 +68,7 @@ article h2 {
 }
 
 article div.login-fields {
-  width: 300px;
+  max-width: 300px;
   border-style: solid;
   border-color: #C9C9C9;
   border-width: 1px;
