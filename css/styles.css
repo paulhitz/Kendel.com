@@ -53,7 +53,7 @@ article {
   background-color: #F2F2F2;
   padding: 30px;
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin-bottom: 40px;
   margin-top: 40px;
 }
@@ -108,3 +108,7 @@ article input {
   width: 100%
 }
 
+#kindle-disclaimer {
+  margin: 0;
+  margin-top: 15px;
+}
