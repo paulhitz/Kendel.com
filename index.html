@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Paul Hitz">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Kendel.com</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-266330-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kendel.com</h1>
+    </header>
+
+    <div class="container">
+      <article class="center-block login-container">
+        <h2>Welcome to <strong>Kendel.com</strong></h2>
+        <p>Please enter your login credentials...</p>
+        <form onsubmit="ga('send', 'event', 'Login'); reset();">
+          <div class="center-block login-fields">
+            <div>
+              <label for="username">User ID:</label>
+              <input id="username" name="username" type="text" placeholder="User ID">
+              <label for="password">Password:</label>
+              <input id="password" name="password" type="password" placeholder="Password">
+            </div>
+            <div class="login-submit">
+              <button id="login" type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+          </div>
+        </form>
+        <p id="kindle-disclaimer" class="text-muted">Kendel.com has no affiliation with <a href="http://www.amazon.com">Amazon.com</a><br>It does <strong>not</strong> provide Amazon Kindle support.</p>
+      </article>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p class="text-muted"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#064;&#107;&#101;&#110;&#100;&#101;&#108;&#046;&#099;&#111;&#109;">Contact Us</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

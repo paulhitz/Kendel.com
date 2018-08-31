@@ -1,0 +1,114 @@
+/*
+ * Various custom styles for the site.
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+header {
+  background-color: #000;
+  border-bottom-style: solid;
+  border-bottom-color: #999;
+}
+
+header h1 {
+  font-size: 70px;
+  margin: 0;
+  color: #ffffff;
+  padding: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fafafa;
+  border-top-style: solid;
+  border-top-color: #e6e6e6;
+  color: #cbcbcb;
+  font-size: small;
+  text-align: center;
+}
+
+footer p {
+  padding-top: 10px;
+}
+
+footer a {
+  color: #999;
+}
+
+article {
+  max-width: 480px;
+  border-style: solid;
+  border-color: #C9C9C9;
+  border-width: 1px;
+  background-color: #F2F2F2;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+article h2, article p {
+  text-align: center;
+}
+
+article h2 {
+  font-weight: normal;
+  font-size: 20pt;
+}
+
+article div.login-fields {
+  max-width: 300px;
+  border-style: solid;
+  border-color: #C9C9C9;
+  border-width: 1px;
+  background-color: #FCFCFC;
+}
+
+article div.login-fields div {
+  padding: 20px;
+}
+
+article div.login-submit {
+  text-align: center;
+  background-color: #575656;
+}
+
+article div.login-submit button {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+div.login-submit .btn-primary {
+  color: #ffffff;
+  background-color: #999;
+  border-color: #ddd;
+}
+div.login-submit .btn-primary:hover, div.login-submit .btn-primary:active, div.login-submit .btn-primary:focus {
+  background-color: #666;
+  border-color: #ddd;
+  outline: none;
+}
+
+article label {
+  display: block;
+}
+
+article input {
+  width: 100%
+}
+
+#kindle-disclaimer {
+  margin: 0;
+  margin-top: 15px;
+}
