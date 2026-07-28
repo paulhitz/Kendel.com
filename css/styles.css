@@ -1,114 +1,299 @@
 /*
- * Various custom styles for the site.
+ * Kendel.com — for-sale landing page.
+ * Light & minimal (Swiss) direction: one grid, hairlines instead of
+ * boxes, a single accent colour used sparingly.
  */
 
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+  --canvas: #FAFAF8;
+  --ink: #14161A;
+  --muted: #6B6F76;
+  --hairline: #E2E1DC;
+  --accent: #D6452B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #111214;
+    --ink: #F2F1ED;
+    --muted: #9A9DA3;
+    --hairline: #2A2C30;
+    --accent: #FF6A4D;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
-}
-
-header {
-  background-color: #000;
-  border-bottom-style: solid;
-  border-bottom-color: #999;
-}
-
-header h1 {
-  font-size: 70px;
   margin: 0;
-  color: #ffffff;
-  padding: 10px;
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", "SF Pro Text", "Inter", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+.wrap {
   width: 100%;
-  height: 60px;
-  background-color: #fafafa;
-  border-top-style: solid;
-  border-top-color: #e6e6e6;
-  color: #cbcbcb;
-  font-size: small;
-  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-footer p {
-  padding-top: 10px;
+a {
+  color: inherit;
 }
 
-footer a {
-  color: #999;
+/* Masthead */
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--hairline);
 }
 
-article {
-  max-width: 480px;
-  border-style: solid;
-  border-color: #C9C9C9;
-  border-width: 1px;
-  background-color: #F2F2F2;
-  padding: 30px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+.masthead .mark {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-article h2, article p {
-  text-align: center;
+.masthead .tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-article h2 {
-  font-weight: normal;
-  font-size: 20pt;
+/* Hero */
+
+.hero {
+  padding: 88px 0 72px;
 }
 
-article div.login-fields {
-  max-width: 300px;
-  border-style: solid;
-  border-color: #C9C9C9;
-  border-width: 1px;
-  background-color: #FCFCFC;
+.hero .eyebrow {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-article div.login-fields div {
-  padding: 20px;
-}
-
-article div.login-submit {
-  text-align: center;
-  background-color: #575656;
-}
-
-article div.login-submit button {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-div.login-submit .btn-primary {
-  color: #ffffff;
-  background-color: #999;
-  border-color: #ddd;
-}
-div.login-submit .btn-primary:hover, div.login-submit .btn-primary:active, div.login-submit .btn-primary:focus {
-  background-color: #666;
-  border-color: #ddd;
-  outline: none;
-}
-
-article label {
-  display: block;
-}
-
-article input {
-  width: 100%
-}
-
-#kindle-disclaimer {
+.hero h1 {
   margin: 0;
-  margin-top: 15px;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.hero .sub {
+  margin: 24px 0 0;
+  max-width: 46ch;
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* CTA */
+
+.cta {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta .email-link {
+  display: inline-block;
+  padding: 16px 28px;
+  border: 1px solid var(--ink);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.cta .email-link:hover,
+.cta .email-link:focus-visible {
+  background-color: var(--ink);
+  color: var(--canvas);
+}
+
+.copy-btn {
+  padding: 16px 20px;
+  border: 1px solid var(--hairline);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.copy-btn:hover,
+.copy-btn:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.copy-btn[hidden] {
+  display: none;
+}
+
+/* Advantages */
+
+.advantages {
+  border-top: 1px solid var(--hairline);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages .item {
+  padding: 40px 32px 40px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.advantages .item:nth-child(3n+1) {
+  padding-left: 0;
+}
+
+.advantages .item:nth-child(3n) {
+  padding-right: 0;
+}
+
+.advantages .item + .item {
+  border-left: 1px solid var(--hairline);
+  padding-left: 32px;
+}
+
+.advantages .item:nth-child(3n+1) {
+  border-left: none;
+}
+
+.advantages .index {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.advantages h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.advantages p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 780px) {
+  .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .advantages .item:nth-child(3n+1) {
+    padding-left: 0;
+    border-left: none;
+  }
+  .advantages .item:nth-child(odd) {
+    padding-left: 0;
+    border-left: none;
+  }
+  .advantages .item:nth-child(even) {
+    padding-left: 32px;
+    border-left: 1px solid var(--hairline);
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding: 56px 0 48px;
+  }
+  .advantages {
+    grid-template-columns: 1fr;
+  }
+  .advantages .item,
+  .advantages .item:nth-child(even),
+  .advantages .item:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+  }
+}
+
+/* Simple pages (404) */
+
+.simple {
+  padding: 96px 0;
+}
+
+.simple h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.simple p {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.simple a.home {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-underline-offset: 4px;
+}
+
+.simple a.home:hover {
+  text-decoration-color: var(--accent);
+}
+
+/* Footer */
+
+footer.site {
+  margin-top: auto;
+  border-top: 1px solid var(--hairline);
+  padding: 28px 0;
+}
+
+footer.site p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer.site a {
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-underline-offset: 3px;
+}
+
+footer.site a:hover {
+  text-decoration-color: var(--accent);
 }
