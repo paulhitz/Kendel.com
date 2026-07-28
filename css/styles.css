@@ -171,7 +171,7 @@ a {
 }
 
 .advantages .item:nth-child(3n+1) {
-  padding-left: 0;
+  padding-left: 30px;
 }
 
 .advantages .item:nth-child(3n) {
